@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const bowser = require('bowser');
 const querystring = require('querystring');
 const keystone = require('keystone');
 
@@ -28,8 +29,6 @@ exports.initLocals = function (req, res, next) {
 	locals.qs_set = qs_set(req, res);
 
 	if (req.cookies.target && req.cookies.target === locals.page.path) res.clearCookie('target');
-
-	const bowser = require('bowser');
 	
 	locals.system = {
 		mobile: bowser.mobile,

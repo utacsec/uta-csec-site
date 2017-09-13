@@ -43,8 +43,8 @@ keystone.init({
 	'mailgun domain': process.env.MAILGUN_DOMAIN,
 	// 'mandrill api key': process.env.MANDRILL_KEY,
 
-	'google api key': process.env.GOOGLE_BROWSER_KEY,
-	'google server api key': process.env.GOOGLE_SERVER_KEY,
+	'google api key': process.env.GOOGLE_API_KEY,
+	// 'google server api key': process.env.GOOGLE_SERVER_KEY,
 
 	'ga property': process.env.GA_PROPERTY,
 	'ga domain': process.env.GA_DOMAIN,
@@ -74,7 +74,7 @@ keystone.set('locals', {
 keystone.set('email locals', {
 	utils: keystone.utils,
 	host: (function () {
-		if (keystone.get('env') === 'staging') return 'http://utacsec.herokuapp.com';
+		if (keystone.get('env') === 'staging') return 'https://uta-csec.herokuapp.com';
 		if (keystone.get('env') === 'production') return 'https://www.utacsec.org';
 		return (keystone.get('host') || 'http://localhost:') + (keystone.get('port') || '8000');
 	})(),
