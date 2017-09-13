@@ -1,0 +1,31 @@
+mixin sponsor(spon)
+	.spon.row(id=spon.id)
+		.col-sm-3.col-md-2.text-center
+			if spon.logo.exists
+				if spon.website
+					a(href=spon.website, target='_blank').spon__logo
+						img(src=spon._.logo.limit(120,120), alt=spon.name)
+				else
+					span.spon__logo
+						img(src=spon._.logo.limit(120,120), alt=spon.name)
+		.col-sm-9.col-md-8
+			h2.spon__heading
+				if spon.website
+					a(href=spon.website, target='_blank')= spon.name
+				else
+					= spon.name
+			if spon.location.serialised
+				h4.spon__location
+					span.spon__location-icon.entypo.entypo-location
+					span.spon__location-address=spon.location.serialised
+			if spon.description.html
+				!= spon.description.html
+			if spon.website
+				h5: a(href=spon.website, target='_blank')= spon.website.replace('http://', '')
+		if spon.members && spon.members.length
+			.col-sm-9.col-sm-offset-3.col-md-2.col-md-offset-0
+				hr.line-dashed.visible-xs.visible-sm
+				h6.text-muted.mt-0 Members in #{spon.name}
+				ul.list-unstyled
+					each member in spon.members
+						li=member.name.full

@@ -1,0 +1,9 @@
+mixin officer(off)
+	.officer
+		.officer__header
+			a(href=off.profile)
+				.img-wrapper
+					img(src=off.image, alt='CSEC officer - ' + off.name).img-circle
+			h4.officer__name=off.name
+			p.officer__title=off.title
+			//-p.officer__twitter: a(href='https://twitter.com/' + off.twitter, target='_blank') @#{off.twitter}

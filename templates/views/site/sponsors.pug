@@ -1,0 +1,24 @@
+extends ../../layouts/default
+
+include ../../mixins/sponsor
+
+block intro
+	.page-intro: .container
+		h1 Sponsors
+		p.lead The sponsors and people who are part of UTA CSEC. Should you be here? Join us!
+		//- .buttons
+			if !user
+				a(href='/join').btn.btn-primary Join UTA CSEC
+			a(href='/members').btn.btn-default View Members
+			a(href='/members/mentors').btn.btn-default View Mentors
+
+block content
+	.page-content: .container
+		.sponsors
+			if sponsors.length
+				each spon, i in sponsors
+					if i
+						hr
+					+sponsor(spon)
+			else
+				h3.text-muted There are no sponsors yet.

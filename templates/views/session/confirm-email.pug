@@ -1,0 +1,13 @@
+extends ../../layouts/default
+
+block flash-messages
+	//- intentionally blank
+		
+block content
+	.container-xs
+		.page-intro
+			h1 Congratulations...your email address has been confirmed!
+			p.lead You may now RSVP to meetings and do other things.
+		.page-content
+			+flash-messages(message)
+			

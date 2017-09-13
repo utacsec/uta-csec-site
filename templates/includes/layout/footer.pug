@@ -1,0 +1,39 @@
+//- SITE FOOTER
+footer.site-footer.site-footer--sticky: .container
+	.row
+		.col-sm-4
+			h5.footer-heading About
+			p We meet every other Wednesday to discuss the latest security news, train for Capture the Flag (CTF) events, and prepare students for a future in cyber security.
+			ul.list-inline
+				li: a(href='/about') More about UTA CSEC
+				li: a(href='mailto:uta.csec@gmail.com') Contact us
+
+		.col-sm-8
+			.row
+				.col-xs-4
+					h5.footer-heading Members
+					ul
+						li: a(href='/members') Members
+						li: a(href='/mentoring') Mentoring
+						li: a(href='/members/mentors') Mentors
+						if !user
+							li: a(href='/join').js-auth-trigger Become a Member
+				.col-xs-4
+					h5.footer-heading Resources
+					ul
+						//-li: a(href='/sponsors') Sponsors
+						li: a(href='/links') Links
+						li: a(href='/getApp') UTA CSEC App
+				.col-xs-4
+					h5.footer-heading: a(href='/sponsors') Sponsors
+					//-ul: each sponsor in sponsors
+					//-	li 
+					//-		a(href= sponsor.website, rel='external')= sponsor.name 
+					//-		i
+	.row.footer-copyright
+		form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
+			input(type='hidden', name='cmd', value='_s-xclick')
+			input(type='hidden', name='hosted_button_id', value='643JSCHK2PZVU')
+			input(type='image', src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif', name='submit', alt='PayPal - The safer, easier way to pay online!')
+			img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
+		p Copyright &copy; 2017 UTA Cyber Security Club.

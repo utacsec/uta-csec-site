@@ -1,0 +1,62 @@
+{
+  "name": "uta-csec-site",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utacsec/uta-csec-site.git"
+  },
+  "dependencies": {
+    "async": "2.5.0",
+    "babel-core": "6.26.0",
+    "babel-plugin-syntax-object-rest-spread": "6.13.0",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-register": "6.26.0",
+    "babelify": "7.3.0",
+    "body-parser": "1.17.2",
+    "bowser": "1.7.3",
+    "browserify-middleware": "7.1.0",
+    "classnames": "2.2.5",
+    "connect-mongo": "1.3.2",
+    "dotenv": "4.0.0",
+    "email-check": "1.1.0",
+    "express-graphql": "0.6.11",
+    "graphql": "^0.10.5",
+    "graphql-relay": "0.5.2",
+    "greenlock": "2.1.16",
+    "greenlock-express": "2.0.11",
+    "jstransformer": "1.0.0",
+    "keystone": "https://github.com/keystonejs/keystone.git#f3083c",
+    "keystone-email": "1.0.5",
+    "localhost.daplie.me-certificates": "1.3.5",
+    "lodash": "4.17.4",
+    "mailgun-js": "0.13.1",
+    "masonry": "0.0.2",
+    "moment": "2.18.1",
+    "mongodb": "2.2.31",
+    "newrelic": "2.2.0",
+    "passport": "0.4.0",
+    "passport-facebook": "2.1.1",
+    "passport-github": "1.1.0",
+    "passport-google-oauth": "1.0.0",
+    "passport-twitter": "1.0.4",
+    "pug": "2.0.0-rc.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "request": "2.81.0",
+    "sanitize-html": "1.14.1",
+    "store-prototype": "1.1.1",
+    "superagent": "3.6.0",
+    "tinymce": "4.6.6"
+  },
+  "engines": {
+    "node": "~4.8.4",
+    "npm": "~2.14.3"
+  },
+  "scripts": {
+    "start": "node keystone.js",
+    "print-graphql-schema": "babel-node ./graphql/scripts/printSchema.js"
+  }
+}

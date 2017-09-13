@@ -1,0 +1,7 @@
+extends layouts/base
+
+block content
+	p Hi #{attendee.name.first},
+	p The UTA Cyber Security Club has scheduled a new meeting.
+	p Follow the link below to see when, where, what topics will be covered and to RSVP:
+	a(href=host + link)= host + link

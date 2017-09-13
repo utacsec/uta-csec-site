@@ -1,0 +1,9 @@
+extends layouts/base
+
+block content
+	p Hi #{subscriber.name.first},
+	p: if content
+		!=content.replace(/\n/g, '<br>')
+	p: if link_url
+		a(href=host + link_url)= link_label ? link_label : host + link_url
+		

@@ -1,0 +1,42 @@
+extends ../../layouts/default
+
+include ../../mixins/officer
+
+block intro
+	.page-intro: .container
+		//-img(src='/images/placeholders/logo-cyber-2048.jpg')
+		h1.page-title About
+		p.lead We meet every other Wednesday to discuss the latest security news, train for Capture the Flag (CTF) events, and prepare students for a future in cyber security.
+		//-p.lead The UTA Cyber Security Club couldn't operate without its officers:
+
+block content
+	.page-content
+		.section.highlight: .container
+			h2 UTA Cyber Security Club Officers
+			//- p.lead Each month the SydJS team works to bring you great presenters in a great venue.
+			.row.about-officers.col-md-offset-1
+				each off in officers
+					.col-sm-4
+						+officer(off)
+					
+		//- CODE
+		.section: .container-sm
+			h2#CoC Ethical Code of Conduct
+			h5 We share our knowledge of all sides of cyber security!
+			p While attending and participating in activities with the Cyber Security Club, you will be learning about security information systems.
+			p In doing so, you will also be learning how one can break such systems with hacking tools, including but not limited to buffer overflows, injection attacks, cross-site scripting, viruses, network scanners, and reverse engineering.
+			p This information is shared solely for the purposes of cyber defense.
+			p In participating in these activities, you hereby submit that you will not use any of the hacking tools we discuss or any other hacking tools or other means to improperly access any systems that you do not own or have express written authorization to do so, deny service to legitimate users, or otherwise act in an illegal or improper manner.
+			p If at any time you think that your actions could possibly violate this code, you will discuss the matter with any of the club officers or faculty advisors before proceeding.
+			p Any violation of this ethical code of conduct may result in legal penalties, University sanction, and you will be permanently banned from the Cyber Security Club organization and not be allowed to participate in any future activities.
+			p Club Officers, John Podolanko, Zehra Jafri, Mitchell Shelton, Cam Nguyen and Andrew Collyer, Faculty Advisors Jiang Ming and Dave Levine, the Cyber Security Club, the Department of Computer Science and Engineering, the University of Texas at Arlington, and the State of Texas take no responsibility for your conduct with regards to what you learn within.
+			p You take full responsibility for your own actions.
+			hr.mv-3
+			h5 Thank you!
+			p All members are required to sign a copy of this 
+				a(href='/download/Ethical-CoC.pdf') Ethical Code of Conduct.
+
+block js
+	// twitter
+	script.
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');
