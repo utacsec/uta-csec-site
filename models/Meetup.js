@@ -23,7 +23,7 @@ Meetup.add({
 	place: { type: String, required: false, initial: true, width: 'medium', default: 'ERB 228 (CSE@UTA)', note: 'ERB 228 (CSE@UTA)', },
 	map: { type: String, required: false, initial: true, width: 'medium', default: '500 UTA Blvd, Arlington, TX 76018', note: '500 UTA Blvd, Arlington, TX 76018', },
 	description: { type: Types.Html, wysiwyg: true, },
-	maxRSVPs: { type: Number, default: 60, },
+	maxRSVPs: { type: Number, default: 50, },
 	totalRSVPs: { type: Number, noedit: true, },
 	legacy: { type: Boolean, noedit: true, collapse: true, },
 });

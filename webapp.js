@@ -52,6 +52,17 @@ keystone.init({
 	'cloudinary secure': true,
 
 	'basedir': __dirname,
+	
+	'port': process.env.PORT,
+	'ssl port': process.env.SSL_PORT,
+	'ssl': 'force',
+	
+	'greenlock': (process.env.NODE_ENV === 'production') && {
+		'email': 'uta.csec@gmail.com',
+		'domains': [ 'www.utacsec.org', 'utacesc.org', ],
+		'register': true,
+		'tos': true,
+	},
 });
 
 keystone.import('models');

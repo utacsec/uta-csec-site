@@ -54,7 +54,8 @@
     "npm": "~2.14.3"
   },
   "scripts": {
-    "start": "node keystone.js",
+    "preinstall": "npm i -g nodemon",
+    "start": "node webapp.js",
     "print-graphql-schema": "babel-node ./graphql/scripts/printSchema.js"
   }
 }
