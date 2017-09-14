@@ -238,5 +238,5 @@ User.schema.methods.confirmEmail = function (callback) {
  * ============
 */
 
-User.defaultColumns = 'name, email, ifVerified, isMember, isAdmin';
+User.defaultColumns = 'name, email, isVerified, isMember, isAdmin';
 User.register();
