@@ -63,7 +63,7 @@ block content
 								img(src=user.photo.exists ? user._.photo.thumbnail(60, 60) : '/images/placeholders/user-60x60.jpg', alt=user.name.first, width=40, height=40).img-responsive.img-circle
 							.media-body
 								textarea(placeholder='Add your comment...', name='content', onKeyDown='if (event.keyCode === 13) { this.form.submit(); return false; } else { counter(this.form.content, this.form.count); }', onKeyUp='counter(this.form.content, this.form.count);').form-control
-								input(readonly='', type='text', name='count', size=1, maxlength=2, value=70, style='border: none; background: transparent; text-align: center;')
+								input(readonly='', type='text', name='count', size=1, maxlength=2, value=70, style='border: none; background: transparent; text-align: left;')
 								| characters remaining
 								.mv-1
 									br
