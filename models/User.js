@@ -179,7 +179,7 @@ User.schema.virtual('avatarUrl').get(function () {
 	if (this.services.facebook.isConfigured && this.services.facebook.avatar) return this.services.facebook.avatar;
 	if (this.services.google.isConfigured && this.services.google.avatar) return this.services.google.avatar;
 	if (this.services.twitter.isConfigured && this.services.twitter.avatar) return this.services.twitter.avatar;
-	if (this.gravatar) return 'https://www.gravatar.com/avatar/' + this.gravatar + '?d=https%3A%2F%2Futacsec.org%2Fimages%2Favatar.png&r=pg';
+	if (this.gravatar) return 'https://www.gravatar.com/avatar/' + this.gravatar + '?d=https%3A%2F%2Fwww.utacsec.org%2Fimages%2Favatar.png&r=pg';
 });
 
 // Usernames
