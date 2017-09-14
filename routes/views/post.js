@@ -47,9 +47,10 @@ exports = module.exports = function(req, res) {
             allowedTags: [ 'b', 'i', 'em', 'strong', 'a', ],
             allowedAttributes: { 'a': [ 'href', ], },
         });
+        const commentTrim = req.body.content.replace(/\s/g, '');
 
 		if (req.user.isVerified) {
-			if (comment.length) {
+			if (comment.length && commentTrim.length) {
                 updater.process(req.body, {
                     flashErrors: true,
                     logErrors: true,
@@ -66,7 +67,7 @@ exports = module.exports = function(req, res) {
                     next();
                 });
             } else {
-			    if (req.body.content.length) {
+			    if (req.body.content.length && commentTrim.length) {
 			        req.flash('error', 'Either you entered a disallowed symbol or you were being shady...not cool, bro!');
                 } else {
                     req.flash('error', 'You cannot post a blank comment.');
