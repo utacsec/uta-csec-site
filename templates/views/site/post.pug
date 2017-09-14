@@ -43,7 +43,7 @@ block content
 
 				//- Comment
 				.comments
-					h4.mb-1=post.comments.length == 0 ? 'Be the first to reply' : plural(post.comments.length, '* comment', '* comments')
+					h4.mb-1=post.comments.length === 0 ? 'Be the first to reply' : plural(post.comments.length, '* comment', '* comments')
 					for comment in post.comments
 						if comment.author
 							.comment.media
