@@ -1,5 +1,5 @@
 const keystone = require('keystone');
-const async = require('async');
+// const async = require('async');
 const Email = require('keystone-email');
 const Meetup = keystone.list('Meetup');
 const User = keystone.list('User');

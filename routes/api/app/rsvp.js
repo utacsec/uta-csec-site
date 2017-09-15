@@ -1,4 +1,3 @@
-// const async = require('async');
 const keystone = require('keystone');
 const RSVP = keystone.list('RSVP');
 const User = keystone.list('User');

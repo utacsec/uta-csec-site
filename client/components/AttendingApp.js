@@ -3,10 +3,7 @@ const RSVPStore = require('../stores/RSVPStore');
 
 const AttendingApp = React.createClass({
 	getInitialState: function () {
-		return {
-			isReady: RSVPStore.isLoaded(),
-			attendees: RSVPStore.getAttendees()
-		};
+		return { isReady: RSVPStore.isLoaded(), attendees: RSVPStore.getAttendees(), };
 	},
 	componentDidMount: function () {
 		RSVPStore.addChangeListener(this.updateStateFromStore);
@@ -15,10 +12,7 @@ const AttendingApp = React.createClass({
 		RSVPStore.removeChangeListener(this.updateStateFromStore);
 	},
 	updateStateFromStore: function () {
-		this.setState({
-			isReady: RSVPStore.isLoaded(),
-			attendees: RSVPStore.getAttendees(),
-		});
+		this.setState({ isReady: RSVPStore.isLoaded(), attendees: RSVPStore.getAttendees(), });
 	},
 	renderHeading: function () {
 		if (!this.state.isReady) return <h3 className="heading-with-line">...</h3>;

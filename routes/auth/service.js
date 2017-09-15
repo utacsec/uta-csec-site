@@ -1,5 +1,3 @@
-// const keystone = require('keystone');
-
 const services = {
 	github: require('../../lib/auth/github'),
 	facebook: require('../../lib/auth/facebook'),

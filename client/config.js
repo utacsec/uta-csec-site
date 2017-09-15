@@ -1,5 +1,1 @@
-exports.packages = [
-	'lodash',
-	'react',
-	'superagent',
-];
+exports.packages = [ 'lodash', 'react', 'superagent', ];

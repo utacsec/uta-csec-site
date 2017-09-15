@@ -8,13 +8,8 @@ exports = module.exports = function (req, res) {
 	// Init locals
 	locals.section = 'news';
 	locals.page.title = 'News - UTA CSEC';
-	locals.filters = {
-		category: req.params.category,
-	};
-	locals.data = {
-		posts: [],
-		categories: [],
-	};
+	locals.filters = { category: req.params.category, };
+	locals.data = { posts: [], categories: [], };
 	
 	// Load all categories
 	view.on('init', function (next) {

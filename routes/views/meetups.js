@@ -1,5 +1,5 @@
 const keystone = require('keystone');
-const moment = require('moment');
+// const moment = require('moment');
 const RSVP = keystone.list('RSVP');
 const Meetup = keystone.list('Meetup');
 

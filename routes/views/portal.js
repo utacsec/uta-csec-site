@@ -8,9 +8,7 @@ exports = module.exports = function(req, res) {
     locals.page.title = 'Members Portal';
 
     // Members only
-    if (!req.user || req.user && !req.user.isMember) {
-        return res.redirect('/');
-    }
+    if (!req.user || req.user && !req.user.isMember) return res.redirect('/');
 
     view.render('site/portal');
 };

@@ -112,9 +112,7 @@ exports = module.exports = function (req, res) {
 			return meetupData;
 		};
 		
-		if (data.meetups.last) {
-			response.meetups.last = parseMeetup(data.meetups.last);
-		}
+		if (data.meetups.last) response.meetups.last = parseMeetup(data.meetups.last);
 		
 		if (data.meetups.next && moment().isBefore(data.meetups.next.endDate)) {
 			response.meetups.next = parseMeetup(data.meetups.next, true);

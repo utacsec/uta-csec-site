@@ -45,8 +45,14 @@ const HeroApp = React.createClass({
 	renderBusy: function () {
 		return (
 			<div className="hero-button">
-				{/*<div className="alert alert-success mb-0 text-center">hold on...</div>*/}
-				<div className="alert alert-success mb-0 text-center">Your account is unconfirmed</div>
+				<div className="alert alert-success mb-0 text-center">hold on...</div>
+			</div>
+		);
+	},
+	renderUnregistered: function () {
+		return (
+			<div className="hero-button">
+                <div className="alert alert-warning mb-0 text-center">You cannot RSVP until you confirm your email address.</div>
 			</div>
 		);
 	},
@@ -96,18 +102,20 @@ const HeroApp = React.createClass({
 	renderNoMoreTickets: function () {
 		return (
 			<div className="hero-button">
-				<div className="alert alert-success mb-0 text-center">No more tickets...</div>
+				<div className="alert alert-success mb-0 text-center">No more seats...</div>
 			</div>
 		);
 	},
 	render: function () {
-		if (!this.state.isReady) {
-			return this.renderLoading();
-		}
+		if (!this.state.isReady) return this.renderLoading();
 		
 		if (this.state.isBusy) {
-			return this.renderBusy();
-		}
+		    if (this.state.user.isVerified) {
+                return this.renderBusy();
+            } else {
+		        return this.renderUnregistered();
+            }
+        }
 
 		const hasUser = !!this.state.user;
 		const isRsvpOpen = this.state.meetup.rsvpsAvailable;
