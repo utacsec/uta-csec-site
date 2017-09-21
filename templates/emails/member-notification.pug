@@ -1,9 +1,9 @@
 extends layouts/base
 
 block content
-	p Hi #{subscriber.name.first},
-	p: if content
+	h4 Hi #{subscriber.name.first},
+	h4: if content
 		!=content.replace(/\n/g, '<br>')
-	p: if link_url
+	h4: if link_url
 		a(href=host + link_url)= link_label ? link_label : host + link_url
 		

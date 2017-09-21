@@ -2,8 +2,8 @@ extends layouts/base
 
 block content
 	h1 Hi #{admin},
-	p #{author} just posted to the UTA CSEC news:
-	p: strong= title
-	p You can approve or reject it from the CSEC admin UI or by clicking 
+	h4 #{author} just posted to the UTA CSEC news:
+	h4: strong= title
+	h4 You can approve or reject it from the CSEC admin UI or by clicking 
 		a(href=host + link) here.
 		

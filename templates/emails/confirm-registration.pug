@@ -1,11 +1,11 @@
 extends layouts/base
 
 block content
-	p Hi #{user.name.first},
-	p You recently registered with the UTA Cyber Security Club website.
-	p Please confirm by clicking the following link below:
+	h4 Hi #{user.name.first},
+	h4 You recently registered with the UTA Cyber Security Club website.
+	h4 Please confirm by clicking the following link below:
 	a(href=host + link_url)= host + link_url
 	br
 	br
-	p If you did not register your email address, please notify us at:
+	h4 If you did not register your email address, please notify us at:
 	a(href='mailto:uta.csec@gmail.com') uta.csec@gmail.com

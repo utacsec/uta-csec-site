@@ -2,6 +2,6 @@ extends layouts/base
 
 block content
 	h1 Hi #{name},
-	p #{author} just added a link to UTA CSEC:
-	p: strong= title
-	p You can <a href='#{host}/keystone'>approve or reject it</a> from the CSEC admin UI.
+	h4 #{author} just added a link to UTA CSEC:
+	h4: strong= title
+	h4 You can <a href='#{host}/keystone'>approve or reject it</a> from the CSEC admin UI.
