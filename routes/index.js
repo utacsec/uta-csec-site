@@ -91,6 +91,7 @@ exports = module.exports = function (app) {
     app.get('/about', routes.views.about);
     app.get('/mentoring', routes.views.mentoring);
     app.get('/portal', routes.views.portal);
+    app.get('/toolkit', routes.views.toolkit);
 
     app.get('/getApp', routes.views.getApp);
 

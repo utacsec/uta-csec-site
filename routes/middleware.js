@@ -18,7 +18,7 @@ exports.initLocals = function (req, res, next) {
         { label: 'Meetups', key: 'meetups', href: '/meetups', },
         { label: 'Members', key: 'members', href: '/members', },
 		{ label: 'Links', key: 'links', href: '/links', },
-        { label: 'CSEC App', key: 'getApp', href: '/getApp', },
+        // { label: 'CSEC App', key: 'getApp', href: '/getApp', },
 	];
 	locals.user = req.user;
 	locals.basedir = keystone.get('basedir');
